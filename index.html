@@ -1320,7 +1320,7 @@
                 const uname = localStorage.getItem('na_uname');
                 if(uid && uname) this.setUser({id:uid, name:uname});
 
-                document.getElementById('btn-login').onclick = () => {
+                const loginAction = () => {
                     const name = document.getElementById('input-username').value.trim();
                     if(name) {
                         try {
@@ -1335,6 +1335,11 @@
                         this.showModal("Atención", "Por favor, escriba su nombre");
                     }
                 };
+
+                document.getElementById('btn-login').onclick = loginAction;
+                document.getElementById('input-username').addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') loginAction();
+                });
             }
             setUser(u) {
                 this.user = u;
