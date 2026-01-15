@@ -1,7 +1,7 @@
 {
   "name": "NeuroActive",
   "short_name": "NeuroActive",
-  "start_url": "./NeuroActive23.html",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#F3F4F6",
   "theme_color": "#2563EB",
