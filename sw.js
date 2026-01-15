@@ -1,7 +1,7 @@
 const CACHE_NAME = 'neuroactive-v1';
 const ASSETS = [
   './',
-  './NeuroActive23.html',
+  './index.html',
   './icon-192.png',
   './icon-512.png',
   'https://cdn.tailwindcss.com',
