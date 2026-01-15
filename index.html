@@ -682,7 +682,7 @@
                 let cells = [];
                 for(let i=0; i<size*size; i++) {
                     let d = document.createElement('div');
-                    d.className = 'bg-gray-200 w-full aspect-square rounded-lg cursor-pointer transition-all duration-200 hover:bg-gray-300';
+                    d.className = 'bg-gray-200 w-full aspect-square rounded-lg cursor-pointer transition-all duration-200';
                     d.onclick = () => this.click(i, d);
                     this.container.appendChild(d);
                     cells.push(d);
@@ -701,6 +701,7 @@
                     pattern.forEach(i => cells[i].classList.replace('bg-gray-200', 'bg-neuro-primary'));
                     this.tmOut = setTimeout(() => {
                         pattern.forEach(i => cells[i].classList.replace('bg-neuro-primary', 'bg-gray-200'));
+                        cells.forEach(c => c.classList.add('hover:bg-gray-300'));
                         this.active = true;
                         this.message("¡Repite el patrón!");
                     }, 1500 + (this.level * 300)); // Slower show time
